@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstViewCell" id="KGk-i7-Jjw" customClass="CheckBoxTableViewCell" customModule="ExamenPractico" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-Rs-urq">
+                        <rect key="frame" x="10" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                        <connections>
+                            <action selector="clickSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="kBt-AI-gzO"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV2-LH-zqM">
+                        <rect key="frame" x="79" y="11.666666666666664" width="221" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Eov-Rs-urq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IDX-7E-eNI"/>
+                    <constraint firstAttribute="trailing" secondItem="PV2-LH-zqM" secondAttribute="trailing" constant="20" id="MWV-nB-39C"/>
+                    <constraint firstItem="Eov-Rs-urq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hbc-QL-WTk"/>
+                    <constraint firstItem="PV2-LH-zqM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hpU-0p-9r7"/>
+                    <constraint firstItem="PV2-LH-zqM" firstAttribute="leading" secondItem="Eov-Rs-urq" secondAttribute="trailing" constant="20" id="k79-w0-S6j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="switchCheck" destination="Eov-Rs-urq" id="0gx-f0-SJz"/>
+                <outlet property="textOption" destination="PV2-LH-zqM" id="l7v-ZG-1eg"/>
+            </connections>
+            <point key="canvasLocation" x="-5" y="21"/>
+        </tableViewCell>
+    </objects>
+</document>

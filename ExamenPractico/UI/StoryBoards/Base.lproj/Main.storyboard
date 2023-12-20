@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0bq-3q-zzZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="t6c-hw-QBw">
+            <objects>
+                <navigationController id="0bq-3q-zzZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T2O-CN-xk4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ax9-Rg-woL" kind="relationship" relationship="rootViewController" id="hSY-7a-GcQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qc1-gd-7wg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-882" y="-125"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="bID-jP-nEU">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ax9-Rg-woL" customClass="ViewController" customModule="ExamenPractico" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="okO-Ak-nix">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tQm-Y6-9hs">
+                                <rect key="frame" x="0.0" y="173" width="393" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czw-7N-Xhk">
+                                <rect key="frame" x="147" y="753" width="99" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continuar" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="G2F-wA-Pzz" kind="show" identifier="goToNextView" id="LpL-iF-RFY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido, para continuar por favor selecciona por lo menos una opcion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="851-1z-RhT">
+                                <rect key="frame" x="20" y="118.00000000000001" width="353" height="40.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U2c-jG-4G0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tQm-Y6-9hs" firstAttribute="top" secondItem="U2c-jG-4G0" secondAttribute="top" constant="70" id="1mk-h1-T3i"/>
+                            <constraint firstItem="U2c-jG-4G0" firstAttribute="trailing" secondItem="tQm-Y6-9hs" secondAttribute="trailing" id="4d8-gj-SQo"/>
+                            <constraint firstItem="U2c-jG-4G0" firstAttribute="bottom" secondItem="Czw-7N-Xhk" secondAttribute="bottom" constant="30" id="C76-BA-j97"/>
+                            <constraint firstItem="851-1z-RhT" firstAttribute="top" secondItem="U2c-jG-4G0" secondAttribute="top" constant="15" id="K3B-NY-BWt"/>
+                            <constraint firstItem="Czw-7N-Xhk" firstAttribute="top" secondItem="tQm-Y6-9hs" secondAttribute="bottom" constant="30" id="Uk5-Eb-9vz"/>
+                            <constraint firstItem="tQm-Y6-9hs" firstAttribute="leading" secondItem="U2c-jG-4G0" secondAttribute="leading" id="WRz-ke-xQg"/>
+                            <constraint firstItem="Czw-7N-Xhk" firstAttribute="centerX" secondItem="okO-Ak-nix" secondAttribute="centerX" id="hef-Sz-SAM"/>
+                            <constraint firstItem="U2c-jG-4G0" firstAttribute="trailing" secondItem="851-1z-RhT" secondAttribute="trailing" constant="20" id="m3R-hs-vGH"/>
+                            <constraint firstItem="851-1z-RhT" firstAttribute="leading" secondItem="U2c-jG-4G0" secondAttribute="leading" constant="20" id="vmn-hA-Jid"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inicio" id="Xen-pb-cof"/>
+                    <connections>
+                        <outlet property="tableView" destination="tQm-Y6-9hs" id="VqO-8T-ZG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rco-4s-zkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.358778625954194" y="-124.64788732394366"/>
+        </scene>
+        <!--Datos del usuario-->
+        <scene sceneID="MWc-S5-xbA">
+            <objects>
+                <viewController id="G2F-wA-Pzz" customClass="NextViewController" customModule="ExamenPractico" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmP-uV-oS7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UKs-q5-MB6">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iOx-2R-zkU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iOx-2R-zkU" firstAttribute="trailing" secondItem="UKs-q5-MB6" secondAttribute="trailing" id="Gub-Wt-kq6"/>
+                            <constraint firstItem="iOx-2R-zkU" firstAttribute="bottom" secondItem="UKs-q5-MB6" secondAttribute="bottom" id="WPS-vT-6ul"/>
+                            <constraint firstItem="UKs-q5-MB6" firstAttribute="top" secondItem="iOx-2R-zkU" secondAttribute="top" id="bJy-n0-BTN"/>
+                            <constraint firstItem="UKs-q5-MB6" firstAttribute="leading" secondItem="iOx-2R-zkU" secondAttribute="leading" id="irj-3e-o2q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Datos del usuario" id="Drw-wU-SQM"/>
+                    <connections>
+                        <outlet property="tableView" destination="UKs-q5-MB6" id="tYn-OG-IDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdT-mO-aKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
